@@ -34,7 +34,7 @@ Ready to explore my portfolio website or contribute to its growth? Follow these 
 1. **Clone this repository** to your local machine:
 
 ```bash
-https://github.com/ImMohammadHaroon/ImMohammadHaroon.github.io.git
+https://github.com/ImMohammadHaroon/portfolio.git
 ```
 
 2. **Open the `index.html` file** in your preferred web browser to experience the website firsthand.
