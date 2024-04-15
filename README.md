@@ -2,7 +2,9 @@
 <h1>Welcome to My Dynamic Portfolio Website!</h1>
 
 <h2>Preview</h2>
-![portfolio](./assets/website.jpg)
+
+![website](https://github.com/ImMohammadHaroon/portfolio/assets/162042814/1097bfd3-ce3a-43b7-b760-265b8554268e)
+
 
 
 
