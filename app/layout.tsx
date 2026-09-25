@@ -1,11 +1,26 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Mohammad Haroon | Full-Stack Developer",
-  description:
-    "Mohammad Haroon, full-stack developer in Pakistan. Building thoughtful web applications, real-time experiences, and practical AI products.",
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  authors: [{ name: "Mohammad Haroon", url: site.url }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    images: [{ url: "/opengraph-image", alt: "Mohammad Haroon — MERN Stack Web Developer" }],
+  },
   icons: {
     icon: "/favicon.svg",
   },

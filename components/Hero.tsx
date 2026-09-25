@@ -3,19 +3,17 @@ export default function Hero() {
     <section className="hero wrap" aria-labelledby="hero-title">
       <div className="hero-layout">
         <div className="hero-copy">
-          <div className="eyebrow">FULL-STACK DEVELOPER · AI APPLICATIONS</div>
+          <div className="eyebrow">MERN STACK DEVELOPER · AI APPLICATIONS</div>
           <p className="hello">Hi, I’m Mohammad Haroon.</p>
           <h1 id="hero-title">
-            From your idea
+            Mohammad Haroon
             <br />
-            to a <span className="built">working
-            <br />
-            product.</span>
+            <span className="built">Web Developer.</span>
           </h1>
           <p className="hero-summary">
-            I’m a full-stack developer with one year of experience building web
-            applications for international clients. I work with React, Node.js,
-            Express, and FastAPI to create responsive interfaces, real-time
+            I’m a MERN stack developer with one year of experience building web
+            applications for international clients. I work with MongoDB, Express,
+            React, Node.js, and FastAPI to create responsive interfaces, real-time
             features, and AI-powered applications.
           </p>
           <p className="hero-summary secondary-summary">
