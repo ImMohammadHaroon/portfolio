@@ -3,7 +3,7 @@ export default function Work() {
     <section id="work" className="work wrap">
       <div className="section-heading">
         <div>
-          <span className="kicker">01 / SELECTED WORK</span>
+          <span className="kicker">01 / MOHAMMAD HAROON PORTFOLIO</span>
           <h2>
             Ideas into
             <br />
