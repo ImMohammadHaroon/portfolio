@@ -16,7 +16,7 @@ export default function Stack() {
         </div>
         <div>
           <h3>Backend & data</h3>
-          <p>Node.js · Express.js · Python · FastAPI · Supabase · Socket.IO</p>
+          <p>Node.js · Express.js · MongoDB · Python · FastAPI · Supabase · Socket.IO</p>
         </div>
         <div>
           <h3>AI & integrations</h3>

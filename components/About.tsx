@@ -10,7 +10,7 @@ export default function About() {
         </h2>
         <div className="about-copy">
           <p>
-            I’m Haroon, a full-stack developer based in Sargodha, Pakistan. I
+            I’m Mohammad Haroon, a full-stack web developer based in Sargodha, Pakistan. I
             build web applications that connect considered interfaces with
             reliable backend systems.
           </p>
