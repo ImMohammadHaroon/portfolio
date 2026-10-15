@@ -6,7 +6,7 @@ import Stack from "@/components/Stack";
 import Publication from "@/components/Publication";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import RevealOnScroll from "@/components/RevealOnScroll";
+import ScrollAnimations from "@/components/ScrollAnimations";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 
@@ -61,17 +61,18 @@ export default function Home() {
       <a className="skip" href="#main">
         Skip to content
       </a>
-      <Header />
-      <main id="main">
-        <Hero />
-        <Work />
-        <About />
-        <Stack />
-        <Publication />
-        <Contact />
-      </main>
-      <Footer />
-      <RevealOnScroll />
+      <ScrollAnimations>
+        <Header />
+        <main id="main">
+          <Hero />
+          <Work />
+          <About />
+          <Stack />
+          <Publication />
+          <Contact />
+        </main>
+        <Footer />
+      </ScrollAnimations>
     </>
   );
 }
