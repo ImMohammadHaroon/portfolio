@@ -66,13 +66,16 @@ export default function Contact() {
             <br />
             it happen<span>.</span>
           </h2>
-          <a
-            className="contact-circle"
-            href="mailto:devowl14@gmail.com"
-            aria-label="Email Mohammad Haroon"
-          >
-            ↗
-          </a>
+          {/* Wrapper carries the scroll animation; the link keeps its CSS hover rotation. */}
+          <div className="contact-circle-wrap">
+            <a
+              className="contact-circle"
+              href="mailto:devowl14@gmail.com"
+              aria-label="Email Mohammad Haroon"
+            >
+              ↗
+            </a>
+          </div>
         </div>
         <div className="contact-form-layout">
           <div className="contact-intro">
