@@ -19,8 +19,13 @@ export default function About() {
             integrations, and AI-powered products. I enjoy turning a complicated
             requirement into something people can simply use.
           </p>
-          <a className="text-link" href="/Mohammad-Haroon-Resume.pdf" download>
-            Download my resume ↓
+          <a
+            className="text-link hire-me"
+            href="https://www.fiverr.com/users/abdulquddus7782/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hire me on Fiverr ↗
           </a>
         </div>
       </div>
