@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="wrap">
       <span>© 2026 Mohammad Haroon</span>
       <span>THOUGHTFULLY BUILT, FROM PAKISTAN.</span>
-      <a href="#">Back to top ↑</a>
+      <a href="/#main">Back to top ↑</a>
     </footer>
   );
 }

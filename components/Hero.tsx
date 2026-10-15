@@ -4,7 +4,6 @@ export default function Hero() {
       <div className="hero-layout">
         <div className="hero-copy">
           <div className="eyebrow">MERN STACK DEVELOPER · AI APPLICATIONS</div>
-          <p className="hello">Hi, I’m Mohammad Haroon.</p>
           <h1 id="hero-title">
             Mohammad Haroon
             <br />
@@ -24,8 +23,13 @@ export default function Hero() {
             <a className="primary-cta" href="#work">
               Explore my work <span>↘</span>
             </a>
-            <a className="hero-resume" href="/Mohammad-Haroon-Resume.pdf" download>
-              Download resume ↓
+            <a
+              className="hero-resume hire-me"
+              href="https://www.fiverr.com/users/abdulquddus7782/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hire me ↗
             </a>
           </div>
         </div>
@@ -33,7 +37,7 @@ export default function Hero() {
           <div className="portrait-frame">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/haroon-portrait.jpg"
+              src="/haroon-portrait.png"
               alt="Mohammad Haroon wearing a navy blazer and white shirt"
               width={1086}
               height={1448}
