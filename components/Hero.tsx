@@ -37,7 +37,7 @@ export default function Hero() {
           <div className="portrait-frame">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/haroon-portrait.png"
+              src="/haroon-portrait.webp"
               alt="Mohammad Haroon wearing a navy blazer and white shirt"
               width={1086}
               height={1448}
