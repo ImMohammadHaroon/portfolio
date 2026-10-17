@@ -1313,9 +1313,22 @@ a {
     border-radius: 4px;
     padding: 13px 20px;
     display: flex;
-    gap: 27px;
+    gap: 8px;
     align-items: center;
-    font-size: 14px
+    font-size: 14px;
+    line-height: 1
+}
+
+.cta-icon {
+    display: block;
+    width: 14px;
+    height: 14px;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round
 }
 
 .primary-cta:hover {
@@ -1817,32 +1830,9 @@ a {
 .academic-result {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: flex-end;
     margin: 0 0 24px;
     padding: 17px 0 0
-}
-
-.score {
-    display: block;
-    color: var(--sage);
-    font-size: 44px;
-    line-height: 1.1;
-    letter-spacing: -2px
-}
-
-.score>span {
-    color: var(--muted);
-    font-size: 19px;
-    letter-spacing: -.5px
-}
-
-.score-label {
-    display: block;
-    margin-top: 11px;
-    font: 10px 'Courier New', monospace;
-    letter-spacing: 1px;
-    color: var(--muted)
 }
 
 .degree-label {
@@ -2198,7 +2188,8 @@ a.hire-me {
     transition: transform .18s ease, box-shadow .18s ease, background .18s ease
 }
 
-a.hire-me span {
+a.hire-me span,
+a.hire-me .cta-icon {
     margin-left: 0;
     font-weight: 800
 }

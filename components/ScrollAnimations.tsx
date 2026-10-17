@@ -258,7 +258,6 @@ export default function ScrollAnimations({ children }: { children: ReactNode }) 
 
         const journey = q(".journey-grid");
         if (journey) {
-          const score = q(".score");
           const tl = gsap.timeline({ scrollTrigger: st(journey) });
           tl.from(".career-card", { x: -80, rotateY: -10, opacity: 0, duration: 1.2 }, 0)
             .from(".education-card", { x: 80, rotateY: 10, opacity: 0, duration: 1.2 }, 0.1)
@@ -273,12 +272,6 @@ export default function ScrollAnimations({ children }: { children: ReactNode }) 
               0.7
             )
             .from(".journey-bottom", { opacity: 0, duration: 0.8, stagger: 0.1 }, 0.6);
-          if (score) {
-            tl.add(
-              countTo(score.firstChild, 0, 3.62, (n) => n.toFixed(2), { duration: 1.5 }),
-              0.5
-            );
-          }
         }
 
         /* ------------------------------------------------------------ */

@@ -65,12 +65,6 @@ export default function About() {
             Cholistan University of Veterinary and Animal Sciences
           </p>
           <div className="academic-result">
-            <div>
-              <span className="score">
-                3.62<span> / 4.00</span>
-              </span>
-              <span className="score-label">CUMULATIVE GPA</span>
-            </div>
             <span className="degree-label">
               Bachelor’s
               <br />

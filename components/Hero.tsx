@@ -21,7 +21,10 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a className="primary-cta" href="#work">
-              Explore my work <span>↘</span>
+              Explore my work
+              <svg className="cta-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M4.25 4.25 11.75 11.75M6.5 11.75h5.25V6.5" />
+              </svg>
             </a>
             <a
               className="hero-resume hire-me"
@@ -29,7 +32,10 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Hire me ↗
+              Hire me
+              <svg className="cta-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M4.25 11.75 11.75 4.25M6.5 4.25h5.25v5.25" />
+              </svg>
             </a>
           </div>
         </div>
