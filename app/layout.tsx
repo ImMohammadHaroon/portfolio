@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: site.title,
   description: site.description,
   authors: [{ name: "Mohammad Haroon", url: site.url }],
+  keywords: site.keywords,
+  creator: "Mohammad Haroon",
   openGraph: {
     type: "website",
     locale: "en_US",

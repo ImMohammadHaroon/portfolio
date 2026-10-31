@@ -68,10 +68,10 @@ function buildStructuredData(project: Project) {
         creator: { "@id": `${site.url}/#person` },
         keywords: [
           ...project.seoKeywords,
+          ...site.keywords,
           project.title,
           project.tagline,
           ...project.stack,
-          "Mohammad Haroon",
         ].join(", "),
         url: live?.href ?? url,
         sameAs: project.links.map((link) => link.href),
@@ -139,7 +139,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: project.seoKeywords,
+    keywords: [...new Set([...site.keywords, ...project.seoKeywords])],
     authors: [{ name: "Mohammad Haroon", url: site.url }],
     creator: "Mohammad Haroon",
     alternates: { canonical: url },

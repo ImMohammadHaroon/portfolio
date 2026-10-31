@@ -996,6 +996,17 @@ h2 {
     align-self: flex-start
 }
 
+.identity-faq {
+    margin-top: 72px;
+    max-width: 760px
+}
+
+.identity-faq h2 {
+    margin: 18px 0 22px;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.15
+}
+
 .text-link {
     font-size: 14px;
     border-bottom: 1px solid #b9b2a2;
