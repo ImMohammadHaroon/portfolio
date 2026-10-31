@@ -1,6 +1,6 @@
-# Portfolio SEO — 15 October 2026
+# Portfolio SEO — 31 October 2026
 
-Implemented locally; deployment and Google indexing have not been verified.
+BeyondSEO HTTP crawl of the live www host completed on 31 October 2026 (`docs/seo/beyondseo-plan.md`, evidence in `docs/seo/beyondseo-run/`). Local case-study enrichment is in this repository and must be deployed before crawlers see the fuller project pages.
 
 ## Keyword placement
 
@@ -10,58 +10,66 @@ Implemented locally; deployment and Google indexing have not been verified.
 | Mohammad Haroon Portfolio | Page title, project section label, website name, project page titles |
 | Mohammad Haroon Web Developer | Name and role in the visible H1, title and description |
 | Haroon Portfolio | Website alternate name in structured data |
-| MERN Stack Developer | Hero introduction and role, metadata, structured data; MongoDB confirmed by owner |
-| Project names (Meeting AI, ProjectSphere, MedMatch AI, Owlance AI, Foncentra, Aperture Futures) | Dedicated `/projects/[slug]` titles, H1s, Open Graph, SoftwareApplication schema |
+| MERN Stack Developer | Hero introduction and role, metadata, structured data |
+| Project names (Meeting AI, ProjectSphere, MedMatch AI, Owlance AI, Foncentra, Aperture Futures) | Dedicated `/projects/[slug]` titles, H1s, Open Graph, SoftwareApplication schema, case-study body copy |
 
 Natural wording takes priority over repeating exact phrases. No search-volume or ranking claims have been made.
 
-## Changes
+## Live crawl snapshot (31 October 2026)
 
-- Canonical homepage uses `https://www.haroon.live`, matching the observed live redirect from the non-www domain.
-- Added crawler rules and a sitemap. Homepage plus six project case-study URLs are listed. Section anchors are not separate pages. No fabricated modification dates.
-- Added Open Graph metadata, a generated 1200 × 630 social image and a large-image Twitter card on the homepage.
-- Added connected Person, WebSite and ProfilePage structured data using the existing public identity and profile links.
-- Updated visible name, role and technology copy. Kept the existing Google Analytics configuration.
+| Check | Result |
+| --- | --- |
+| Homepage | 200 |
+| Six project URLs | 200 each |
+| robots.txt | 200 — Allow `/`, Disallow `/api/`, Sitemap declared |
+| sitemap.xml | 7 URLs (home + projects) |
+| Project page word counts (live) | ~103–118 words — thin; local enrichment pending deploy |
+| Schema types present | Home: Person, WebSite, ProfilePage; Projects: WebPage, SoftwareApplication, BreadcrumbList |
+| Browser render crawl | Not run (Playwright unavailable in BeyondSEO doctor) |
+| Rankings / traffic / backlinks | Not measured |
 
-## Project case-study SEO (15 October 2026)
+## Local case-study enrichment (this repo)
 
-Dedicated pages:
+- Expanded `lib/projects.ts` with `overview`, `frontend`, `backend`, `challenges`, `contribution`, `faqs`, `seoTitle`, and `seoKeywords`.
+- Project detail UI uses the site palette (linen / terracotta / sage): breadcrumb, answer intro, CTAs, dual stack panels, challenges, FAQ accordion, contact path.
+- Full markdown case studies in `docs/projects/*.md` with SEO meta blocks.
+- Per-page BeyondSEO sheet: `docs/seo/project-page-seo.md`.
+- Schema `@graph` includes FAQPage plus WebPage, SoftwareApplication, and BreadcrumbList.
+- Stack corrections vs digowl.me / GitHub: Meeting AI uses OpenAI Whisper + GPT (not Groq); Foncentra aligned to custom theme + GSAP; Owlance GitHub link added; Aperture role remains Frontend Developer with product context.
+
+## Project case-study SEO
 
 | URL | Focus |
 | --- | --- |
-| `/projects/meeting-ai` | Meeting AI audio intelligence platform |
+| `/projects/meeting-ai` | Meeting AI audio intelligence / WebRTC |
 | `/projects/projectsphere` | ProjectSphere multi-tenant SaaS |
 | `/projects/medmatch-ai` | MedMatch AI heart-risk ML app |
 | `/projects/owlance-ai` | Owlance AI freelancing assistant |
-| `/projects/foncentra` | Foncentra WordPress eBook store |
-| `/projects/aperture-futures` | Aperture Futures frontend work |
+| `/projects/foncentra` | Foncentra WordPress digital publishing |
+| `/projects/aperture-futures` | Aperture Futures frontend contribution |
 
 Per project page:
 
 - Unique `title` and `seoDescription` naming Mohammad Haroon and the product.
 - Canonical URL under `https://www.haroon.live/projects/[slug]`.
 - Open Graph / Twitter large-image cards using the project cover image.
-- JSON-LD `@graph` with `WebPage`, `SoftwareApplication` (author/creator → Person), and `BreadcrumbList`.
+- JSON-LD `@graph` with `WebPage`, `SoftwareApplication`, and `BreadcrumbList`.
 - Visible byline linking back to the portfolio home and Work section.
 - Internal links between related projects (“More projects”).
 
-Evidence source: repository source and production build inspection on 15 October 2026. BeyondSEO doctor reported HTTP ready; Playwright/browser crawl was not available in this environment, so no full rendered crawl of the live www host was run for these new paths. Indexing status after deploy is unverified.
-
-## Evidence and remaining work
-
-Direct HTTP checks on 25 September 2026 returned 200 for the www homepage and 404 for robots.txt, sitemap.xml and Mohammad-Haroon-Resume.pdf. The repository also lacks the resume PDF. Restore the real PDF at `public/Mohammad-Haroon-Resume.pdf` to repair the existing download links.
-
-The BeyondSEO runtime check on 15 October 2026 found HTTP ready with beautifulsoup4 available; Playwright/Chromium browser mode and PDF export were not ready. Direct source/build inspection were used for the project-page SEO pass; no complete rendered crawl, reputation audit, ranking survey or private Search Console/Analytics review was performed.
-
 ## After deployment
 
-1. Confirm the homepage, all six `/projects/*` URLs, `/robots.txt`, `/sitemap.xml` and `/opengraph-image` load on the public www domain.
-2. In the matching Search Console property, submit `https://www.haroon.live/sitemap.xml`.
-3. Inspect `https://www.haroon.live/` and each project URL with URL Inspection, test the live URL, and request indexing. Check Google's selected canonical once indexing data is available.
-4. Validate homepage and project structured data with Schema.org's validator and Google's Rich Results Test. Valid markup does not guarantee enhanced search results.
-5. Check Analytics Realtime after visiting the published site. Search Console verification and reporting were reported by the owner, not independently checked here.
-6. Record a Search Console baseline, then compare impressions, clicks, queries and landing pages after about four weeks. Separate branded name searches from broader developer searches and project-name queries.
+1. Confirm homepage, all six `/projects/*` URLs, `/robots.txt`, `/sitemap.xml`, and `/opengraph-image` on www.
+2. Submit `https://www.haroon.live/sitemap.xml` in Search Console.
+3. URL Inspection for home + each project URL; request indexing.
+4. Validate structured data with Schema.org validator and Rich Results Test.
+5. Recrawl with BeyondSEO HTTP mode and compare project word counts / meta to the 31 Oct baseline.
+6. Confirm Foncentra live DNS; replace the outbound link if the domain stays unresolved.
+7. After about four weeks, review Search Console impressions/clicks for branded vs project-name queries.
 
-## Content follow-up
+## Remaining work
 
-Strengthen each case study with accurate descriptions of your own contributions, technology choices and outcomes. Keep your name and portfolio URL consistent on your existing GitHub and LinkedIn profiles. Broad terms such as MERN Stack Developer need evidence of relevant work beyond technical metadata; placement alone does not guarantee rankings.
+- Deploy local enrichment so live meta no longer shows outdated Groq / Elementor wording.
+- Optional browser-mode BeyondSEO crawl once Playwright is available.
+- Reputation / competitor sampling not part of this pass — see `docs/seo/beyondseo-plan.md`.
+- Resume PDF at `public/Mohammad-Haroon-Resume.pdf` was previously missing; restore if download links still point there.
