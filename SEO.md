@@ -10,6 +10,10 @@ BeyondSEO HTTP crawl of the live www host completed on 31 October 2026 (`docs/se
 | Mohammad Haroon Portfolio | Page title, project section label, website name, project page titles |
 | Mohammad Haroon Web Developer | Name and role in the visible H1, title and description |
 | Haroon Portfolio | Website alternate name in structured data |
+| Muhammad Haroon | Person `alternateName`, homepage FAQ answer, metadata keywords, project page keywords |
+| Muhmmad Haroon | Same-person spelling alias in Person `alternateName`, one FAQ answer, and metadata keywords. Not used as the visible name |
+| Muhammad Haroon Developer | Homepage FAQ (“What does Muhammad Haroon develop?”), Person alias, metadata keywords |
+| Muhammad Haroon Portfolio | Website `alternateName`, homepage FAQ, metadata keywords |
 | MERN Stack Developer | Hero introduction and role, metadata, structured data |
 | Project names (Meeting AI, ProjectSphere, MedMatch AI, Owlance AI, Foncentra, Aperture Futures) | Dedicated `/projects/[slug]` titles, H1s, Open Graph, SoftwareApplication schema, case-study body copy |
 

@@ -8,7 +8,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import {
+  identityFaqs,
+  personAlternateNames,
+  site,
+  websiteAlternateNames,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: site.url },
@@ -21,10 +26,13 @@ const structuredData = {
       "@type": "Person",
       "@id": `${site.url}/#person`,
       name: "Mohammad Haroon",
+      alternateName: personAlternateNames,
       url: site.url,
       image: `${site.url}/haroon-portrait.jpg`,
       jobTitle: "MERN Stack Web Developer",
-      description: "Full-stack web developer based in Sargodha, Pakistan, building web applications, real-time features and AI-powered products.",
+      description: "Full-stack web developer based in Sargodha, Pakistan, building web applications, real-time features and AI-powered products. Also searched as Muhammad Haroon, Muhammad Haroon developer, and Muhmmad Haroon.",
+      disambiguatingDescription:
+        "Muhammad Haroon (Mohammad Haroon) is the MERN stack developer behind the Muhammad Haroon portfolio at haroon.live.",
       homeLocation: { "@type": "Place", name: "Sargodha, Pakistan" },
       knowsAbout: ["MongoDB", "Express.js", "React", "Node.js", "Full-stack web development", "Python", "FastAPI", "AI applications"],
       sameAs: ["https://github.com/ImMohammadHaroon", "https://www.linkedin.com/in/devowl/"],
@@ -34,7 +42,8 @@ const structuredData = {
       "@id": `${site.url}/#website`,
       url: site.url,
       name: site.name,
-      alternateName: "Haroon Portfolio",
+      alternateName: websiteAlternateNames,
+      description: site.description,
       publisher: { "@id": `${site.url}/#person` },
       inLanguage: "en",
     },
@@ -47,6 +56,19 @@ const structuredData = {
       isPartOf: { "@id": `${site.url}/#website` },
       mainEntity: { "@id": `${site.url}/#person` },
       inLanguage: "en",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${site.url}/#identity-faq`,
+      isPartOf: { "@id": `${site.url}/#webpage` },
+      mainEntity: identityFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
     },
   ],
 };
