@@ -1,3 +1,5 @@
+import { identityFaqs } from "@/lib/site";
+
 export default function About() {
   return (
     <section id="about" className="about wrap">
@@ -76,6 +78,18 @@ export default function About() {
             <span className="journey-mark">02</span>
           </div>
         </article>
+      </div>
+      <div className="identity-faq">
+        <span className="kicker">ALSO SEARCHED AS</span>
+        <h2 id="identity-faq-heading">Muhammad Haroon, developer and portfolio</h2>
+        <div className="project-detail-faq" aria-labelledby="identity-faq-heading">
+          {identityFaqs.map((faq) => (
+            <details key={faq.question} className="project-detail-faq-item">
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );
